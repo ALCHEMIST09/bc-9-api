@@ -1,6 +1,4 @@
 import urllib3, json
-#output = request.urlopen('https://openweathermap.org/current')
-#response = request.urlopen('https://api.openweathermap.org/data/')
 
 cities = ['Nairobi', 'London', 'Lagos', 'Tehran', 'New Delhi', 'Tokyo']
 
@@ -12,8 +10,6 @@ def get_weather_info(city):
     r = http.request('GET', endpoint, fields)
     ans = json.loads(r.data.decode('utf-8'))
     return ans
-
-#print(json.loads(r.data.decode('utf-8')))
 
 print("CITY\t\tTEMP\t\tDESCRIPTION\n")
 line_under = "="
